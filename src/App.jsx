@@ -34,9 +34,21 @@ function AppContent() {
   }
 
   const isHomePage = location.pathname === '/'
+  const isAboutPage = location.pathname === '/about'
+  const isCredentialsPage = location.pathname === '/credentials'
+  const isProjectsPage = location.pathname === '/projects'
+  
+  // Get page class based on current route
+  const getPageClass = () => {
+    if (isHomePage) return 'home-page'
+    if (isAboutPage) return 'about-page'
+    if (isCredentialsPage) return 'credentials-page'
+    if (isProjectsPage) return 'projects-page'
+    return ''
+  }
 
   return (
-    <div className={`app ${isHomePage ? 'home-page' : ''}`}>
+    <div className={`app ${getPageClass()}`}>
       <header className="header">
         <div className="container">
           <div className="logo">
@@ -66,7 +78,7 @@ function AppContent() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2025. All rights reserved.</p>
+          <p>&copy;Jack Wember 2025. All rights reserved.</p>
         </div>
       </footer>
     </div>

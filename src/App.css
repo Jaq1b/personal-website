@@ -7,34 +7,35 @@
 :root {
   /* Customize your background here - you can use gradients, images, or solid colors */
   --bg-primary: #0a0a0a;
+  
   /* Home page background image - set to 'none' to disable */
   --bg-home-image: url('/G6CDJ7QbMAE_Jd2.jpg');
-  /* If image doesn't load, try: url('./G6CDJ7QbMAE_Jd2.jpg') or check browser console for 404 errors */
-  /* Examples:
-     --bg-home-image: url('/your-image.jpg'); (for files in public folder)
-     --bg-home-image: url('https://example.com/image.jpg');
-     --bg-home-image: none;
-  */
-  /* Home page background blur amount - adjust this value to experiment */
   --bg-home-blur: 3px;
+  
+  /* About page background image - set to 'none' to disable */
+  --bg-about-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  --bg-about-blur: 15px;
+  
+  /* Credentials page background image - set to 'none' to disable */
+  --bg-credentials-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  --bg-credentials-blur: 15px;
+  
+  /* Projects page background image - set to 'none' to disable */
+  --bg-projects-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  --bg-projects-blur: 15px;
+  
+  /* If image doesn't load, try: url('./your-image.jpg') or check browser console for 404 errors */
   /* Examples:
-     --bg-home-blur: 0px; (no blur)
-     --bg-home-blur: 2px; (very slight blur)
-     --bg-home-blur: 5px; (moderate blur)
-     --bg-home-blur: 10px; (strong blur)
+     --bg-about-image: url('/your-about-image.jpg'); (for files in public folder)
+     --bg-about-image: url('https://example.com/image.jpg');
+     --bg-about-image: none;
   */
-  /* Other pages background blur amount - stronger blur for non-home pages */
-  --bg-other-blur: 15px;
-  /* Examples:
-     --bg-other-blur: 10px; (moderate blur)
-     --bg-other-blur: 15px; (strong blur)
-     --bg-other-blur: 20px; (very strong blur)
-  */
-  /* Examples for main background:
-     --bg-primary: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-     --bg-primary: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
-     --bg-primary: url('your-image.jpg');
-     --bg-primary: #0f0f0f;
+  /* Blur amount examples:
+     --bg-about-blur: 0px; (no blur)
+     --bg-about-blur: 2px; (very slight blur)
+     --bg-about-blur: 5px; (moderate blur)
+     --bg-about-blur: 15px; (strong blur)
+     --bg-about-blur: 20px; (very strong blur)
   */
 }
 
@@ -58,7 +59,7 @@
   z-index: -1;
 }
 
-/* Home page background image - RESTORED TO WORKING VERSION */
+/* Home page background image */
 .app.home-page::after {
   content: '';
   position: fixed;
@@ -66,7 +67,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  background-image: var(--bg-home-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -75,6 +76,10 @@
   filter: blur(var(--bg-home-blur));
   -webkit-filter: blur(var(--bg-home-blur));
   transform: scale(1.05);
+  /* Force rendering in Chrome */
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Dark overlay for home page */
@@ -83,27 +88,86 @@
   z-index: -1;
 }
 
-/* Other pages - same image but more blur */
-.app:not(.home-page)::after {
+/* About page background image */
+.app.about-page::after {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  background-image: var(--bg-about-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   z-index: -2;
-  filter: blur(var(--bg-other-blur));
-  -webkit-filter: blur(var(--bg-other-blur));
+  filter: blur(var(--bg-about-blur));
+  -webkit-filter: blur(var(--bg-about-blur));
   transform: scale(1.05);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-/* Dark overlay for other pages */
-.app:not(.home-page)::before {
+/* Dark overlay for about page */
+.app.about-page::before {
+  background: rgba(0, 0, 0, 0.15) !important;
+  z-index: -1;
+}
+
+/* Credentials page background image */
+.app.credentials-page::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg-credentials-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -2;
+  filter: blur(var(--bg-credentials-blur));
+  -webkit-filter: blur(var(--bg-credentials-blur));
+  transform: scale(1.05);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Dark overlay for credentials page */
+.app.credentials-page::before {
+  background: rgba(0, 0, 0, 0.15) !important;
+  z-index: -1;
+}
+
+/* Projects page background image */
+.app.projects-page::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg-projects-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -2;
+  filter: blur(var(--bg-projects-blur));
+  -webkit-filter: blur(var(--bg-projects-blur));
+  transform: scale(1.05);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Dark overlay for projects page */
+.app.projects-page::before {
   background: rgba(0, 0, 0, 0.15) !important;
   z-index: -1;
 }

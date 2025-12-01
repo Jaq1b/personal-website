@@ -4,21 +4,21 @@ function Credentials() {
   const credentials = [
     {
       name: 'GitHub',
-      url: 'https://github.com/yourusername',
-      description: 'Check out my code repositories and contributions',
-      username: 'yourusername'
+      url: 'https://github.com/Jaq1b',
+      description: 'This is my personal github page',
+      username: 'Jaq1b'
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/yourusername',
+      url: 'https://www.linkedin.com/in/jack-wember/',
       description: 'Connect with me on LinkedIn',
-      username: 'yourusername'
+      username: 'Jack Wember'
     },
     {
       name: 'Handshake',
-      url: 'https://joinhandshake.com/',
+      url: 'https://app.joinhandshake.com/profiles/ftcese',
       description: 'View my profile and career opportunities',
-      username: 'yourusername'
+      username: 'Jack Wember'
     }
   ]
 
@@ -28,7 +28,7 @@ function Credentials() {
         <div className="content-section">
           <h1 className="section-title">My Credentials</h1>
           <p className="section-subtitle">
-            Connect with me through these platforms and view my professional profiles
+            These are my professional profiles on other websites
           </p>
           <div className="credentials-grid">
             {credentials.map((credential, index) => (
