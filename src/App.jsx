@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
@@ -6,9 +6,18 @@ import Credentials from './components/Credentials'
 import Projects from './components/Projects'
 import './App.css'
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   )
@@ -78,7 +87,7 @@ function AppContent() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy;Jack Wember 2025. All rights reserved.</p>
+          <p>&copy;Jack Wember 2026. All rights reserved.</p>
         </div>
       </footer>
     </div>

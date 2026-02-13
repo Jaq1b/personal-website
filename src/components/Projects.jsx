@@ -7,14 +7,21 @@ function Projects() {
       description: 'Developed an automated trading bot using Python and Alpaca API that generated $1,500 profit on $10,000 initial investment during 2-week paper trading period. Implemented real-time market data processing, technical analysis indicators, and risk management protocols achieving 15% return.',
       technologies: ['Python', 'Alpaca API', 'Financial Analysis', 'Pandas', 'NumPy'],
       status: 'Completed',
-      link: '#'
+      link: 'https://github.com/Jaq1b/tradingbottest'
     },
     {
       title: 'Raycasting 3D Engine',
       description: 'Led team efforts to build a custom 3D rendering engine from scratch using raycasting techniques similar to Doom, coordinating implementation of mathematical ray-wall intersection algorithms across multiple developers. Contributed to team development of efficient wall rendering system with proper depth calculation, collision detection, and optimized rendering pipeline for real-time performance.',
       technologies: ['Java', 'Computer Graphics', 'Mathematical Algorithms', 'Raycasting'],
       status: 'Completed',
-      link: '#'
+      link: 'https://github.com/JohnnySprit/RaycastingGame'
+    },
+    {
+      title: 'Rock Climbing Difficulty Calculator',
+      description: 'App that with a picture of a route will attempt to calculate an estimated difficulty score.',
+      technologies: ['Python', 'Numpy', 'cv2'],
+      status: 'In Progress',
+      link: 'https://github.com/Jaq1b/Rock-Grader'
     }
   ]
 
