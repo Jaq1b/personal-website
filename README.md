@@ -1,21 +1,21 @@
 # Personal Website
 
-A modern, beautiful personal website with a tabbed interface built with React and React Router.
+A modern personal website with a tabbed interface, built with React and Vite.
 
 ## Features
 
--  Modern, responsive design with smooth animations
--  Mobile-friendly interface
--  Fast performance with Vite
--  Tabbed navigation with React Router
--  Smooth transitions and hover effects
--  Beautiful gradient backgrounds
+- Modern, responsive design with smooth animations
+- Mobile-friendly interface
+- Fast performance with Vite
+- Tabbed navigation with React Router
+- Scroll-to-top on route change
 
-## Tabs
+## Sections
 
-1. **About** - Personal introduction and information
-2. **Credentials** - Links to GitHub, LinkedIn, and Handshake profiles
-3. **Projects** - Showcase of your projects and work
+- **Home** – Landing and introduction
+- **About** – Bio, education, experience, and skills
+- **Credentials** – Links to GitHub, LinkedIn, and Handshake
+- **Projects** – Project showcase
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-The website will be available at `http://localhost:5173`
+Runs at `http://localhost:5173`.
 
 ### Build
 
@@ -39,49 +39,28 @@ The website will be available at `http://localhost:5173`
 npm run build
 ```
 
-### Preview Production Build
+Output goes to `dist/`.
+
+### Preview production build
 
 ```bash
 npm run preview
 ```
 
-## Customization
-
-### Update Your Information
-
-1. **About Section** (`src/components/About.jsx`):
-   - Replace `[Your Name]` with your actual name
-   - Update the education, experience, and goals sections
-   - Add your profile image (replace the placeholder)
-
-2. **Credentials Section** (`src/components/Credentials.jsx`):
-   - Update the GitHub, LinkedIn, and Handshake URLs
-   - Replace `yourusername` with your actual usernames
-
-3. **Projects Section** (`src/components/Projects.jsx`):
-   - Add your actual projects
-   - Update descriptions, technologies, and links
-   - Modify project statuses as needed
-
-### Styling
-
-- Main app styles: `src/App.css`
-- Component styles: `src/components/TabContent.css`
-- Global styles: `src/index.css`
-
-## Technologies
+## Tech stack
 
 - React 18
 - React Router DOM 6
-- Vite
-- CSS3 with modern features
+- Vite 5
+- CSS3
 
-## Project Structure
+## Project structure
 
 ```
 personalwebsite/
 ├── src/
 │   ├── components/
+│   │   ├── Home.jsx
 │   │   ├── About.jsx
 │   │   ├── Credentials.jsx
 │   │   ├── Projects.jsx
@@ -90,6 +69,7 @@ personalwebsite/
 │   ├── App.css
 │   ├── main.jsx
 │   └── index.css
+├── public/
 ├── index.html
 ├── package.json
 ├── vite.config.js

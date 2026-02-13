@@ -1,5 +1,7 @@
 import './TabContent.css'
 
+const profileImageSrc = '/headshot.jpg'  
+
 function About() {
   return (
     <div className="tab-content">
@@ -11,13 +13,18 @@ function About() {
               <div className="about-content">
                 <div className="profile-section">
                   <div className="profile-image">
-                    <div className="profile-placeholder"></div>
+                    <img
+                      src={profileImageSrc}
+                      alt="Jack Wember"
+                      className="profile-photo"
+                    />
                   </div>
                   <div className="profile-info">
                     <h2>Hello, I'm Jack Wember</h2>
                     <p className="lead">
-                      Welcome to my personal website. I'm passionate about creating
-                      innovative solutions and building meaningful projects.
+                        Welcome to my website.I'm a dedicated developer/student who loves to explore new
+                        technologies and create projects that make a difference. This
+                        website showcases my work, credentials, and projects.
                     </p>
                   </div>
                 </div>
@@ -114,15 +121,6 @@ function About() {
                   </div>
                 </div>
                 <div className="about-text">
-                  <p>
-                    I'm a dedicated developer/student who loves to explore new
-                    technologies and create projects that make a difference. This
-                    website showcases my work, credentials, and projects.
-                  </p>
-                  <p>
-                    Feel free to explore the different sections to learn more about
-                    my background, credentials, and the projects I've worked on.
-                  </p>
                 </div>
               </div>
             </div>

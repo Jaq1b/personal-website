@@ -9,19 +9,19 @@
   --bg-primary: #0a0a0a;
   
   /* Home page background image - set to 'none' to disable */
-  --bg-home-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  --bg-home-image: url('/IMG_7542.jpeg');
   --bg-home-blur: 3px;
   
   /* About page background image - set to 'none' to disable */
-  --bg-about-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  --bg-about-image: url('/IMG_7542.jpeg');
   --bg-about-blur: 15px;
   
   /* Credentials page background image - set to 'none' to disable */
-  --bg-credentials-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  --bg-credentials-image: url('/IMG_7542.jpeg');
   --bg-credentials-blur: 15px;
   
   /* Projects page background image - set to 'none' to disable */
-  --bg-projects-image: url('/G6CDJ7QbMAE_Jd2.jpg');
+  --bg-projects-image: url('/IMG_7542.jpeg');
   --bg-projects-blur: 15px;
   
   /* If image doesn't load, try: url('./your-image.jpg') or check browser console for 404 errors */
