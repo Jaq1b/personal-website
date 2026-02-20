@@ -18,10 +18,17 @@ function Projects() {
     },
     {
       title: 'Rock Climbing Difficulty Calculator',
-      description: 'App that with a picture of a route will attempt to calculate an estimated difficulty score.',
+      description: 'App that with a picture of a route will attempt to calculate an estimated difficulty rating.',
       technologies: ['Python', 'Numpy', 'cv2'],
       status: 'In Progress',
       link: 'https://github.com/Jaq1b/Rock-Grader'
+    },
+    {
+      title: 'Personal Website',
+      description: 'This is the website you are currently on. It is built with React and Vite.',
+      technologies: ['React', 'Vite', 'CSS', 'HTML', 'JavaScript'],
+      status: 'In Progress',
+      link: 'https://github.com/Jaq1b/personal-website'
     }
   ]
 

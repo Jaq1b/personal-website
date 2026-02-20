@@ -30,13 +30,7 @@
      --bg-about-image: url('https://example.com/image.jpg');
      --bg-about-image: none;
   */
-  /* Blur amount examples:
-     --bg-about-blur: 0px; (no blur)
-     --bg-about-blur: 2px; (very slight blur)
-     --bg-about-blur: 5px; (moderate blur)
-     --bg-about-blur: 15px; (strong blur)
-     --bg-about-blur: 20px; (very strong blur)
-  */
+  
 }
 
 .app {
@@ -178,7 +172,7 @@
 
 .header {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(20px);
   position: sticky;
   top: 0;
