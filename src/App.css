@@ -1,15 +1,8 @@
 :root {
-  --bg-home-image: url('/IMG_7542.jpeg');
-  --bg-home-blur: 3px;
-  --bg-about-image: url('/IMG_7542.jpeg');
-  --bg-about-blur: 15px;
-  --bg-credentials-image: url('/IMG_7542.jpeg');
-  --bg-credentials-blur: 15px;
-  --bg-projects-image: url('/IMG_7542.jpeg');
-  --bg-projects-blur: 15px;
+  --bg-image: url('/IMG_7542.jpeg');
 }
 
-/* Dark overlay — sits above background image, below content */
+/* Dark overlay */
 .app::before {
   content: '';
   position: fixed;
@@ -18,11 +11,12 @@
   z-index: -1;
 }
 
-/* Background image layer — hidden by default, shown per page */
+/* Background image layer — hidden by default */
 .app::after {
   display: none;
 }
 
+/* All pages share the same image — blur varies per page */
 .app.home-page::after,
 .app.about-page::after,
 .app.credentials-page::after,
@@ -31,45 +25,32 @@
   content: '';
   position: fixed;
   inset: 0;
+  background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   z-index: -2;
   transform: scale(1.05);
-  will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 .app.home-page::after {
-  background-image: var(--bg-home-image);
-  filter: blur(var(--bg-home-blur));
-  -webkit-filter: blur(var(--bg-home-blur));
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
-.app.about-page::after {
-  background-image: var(--bg-about-image);
-  filter: blur(var(--bg-about-blur));
-  -webkit-filter: blur(var(--bg-about-blur));
+.app.about-page::after,
+.app.credentials-page::after,
+.app.projects-page::after {
+  filter: blur(15px);
+  -webkit-filter: blur(15px);
 }
 
-.app.credentials-page::before {
-  background: rgba(0, 0, 0, 0.15) !important;
-}
-.app.credentials-page::after {
-  background-image: var(--bg-credentials-image);
-  filter: blur(var(--bg-credentials-blur));
-  -webkit-filter: blur(var(--bg-credentials-blur));
-}
-
+.app.credentials-page::before,
 .app.projects-page::before {
   background: rgba(0, 0, 0, 0.15) !important;
-}
-.app.projects-page::after {
-  background-image: var(--bg-projects-image);
-  filter: blur(var(--bg-projects-blur));
-  -webkit-filter: blur(var(--bg-projects-blur));
 }
 
 @keyframes fadeIn {
@@ -82,5 +63,5 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fadeIn  { animation: fadeIn 0.4s ease-out; }
+.animate-fadeIn    { animation: fadeIn 0.4s ease-out; }
 .animate-slideInUp { animation: slideInUp 0.5s ease-out; }

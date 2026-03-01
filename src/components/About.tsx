@@ -42,10 +42,7 @@ export default function About() {
 
                 {/* Education */}
                 <div className="text-left p-10 bg-white/5 rounded-xl text-white/95 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] w-full isolate hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]">
-                  <div className="text-[0.75rem] mb-3 inline-block uppercase tracking-[1px] text-white/70 font-semibold">
-                    Education
-                  </div>
-                  <h3 className="font-display text-[1.25rem] mb-2 font-semibold text-white/95 tracking-[-0.01em]">
+                  <h3 className="font-display text-[1.25rem] mb-4 font-semibold text-white/95 tracking-[-0.01em]">
                     Education
                   </h3>
                   <div className="mt-4">
@@ -71,10 +68,7 @@ export default function About() {
 
                 {/* Work Experience */}
                 <div className="text-left p-10 bg-white/5 rounded-xl text-white/95 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] w-full isolate hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]">
-                  <div className="text-[0.75rem] mb-3 inline-block uppercase tracking-[1px] text-white/70 font-semibold">
-                    Experience
-                  </div>
-                  <h3 className="font-display text-[1.25rem] mb-2 font-semibold text-white/95 tracking-[-0.01em]">
+                  <h3 className="font-display text-[1.25rem] mb-4 font-semibold text-white/95 tracking-[-0.01em]">
                     Work Experience
                   </h3>
                   <div className="mt-4">
@@ -127,9 +121,6 @@ export default function About() {
 
               {/* Skills */}
               <div className="text-left p-10 bg-white/5 backdrop-blur-xl rounded-xl text-white/95 transition-all duration-300 shadow-[0_4px_16px_rgba(0,0,0,0.2)] w-full mb-12 isolate hover:bg-white/[0.08] hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]">
-                <div className="text-[0.75rem] mb-3 inline-block uppercase tracking-[1px] text-white/70 font-semibold">
-                  Skills
-                </div>
                 <h3 className="font-display text-[1.25rem] mb-6 font-semibold text-white/95 tracking-[-0.01em]">
                   Skills
                 </h3>
