@@ -1,4 +1,4 @@
-const profileImageSrc = '/headshot.jpg'
+const profileImageSrc = `${import.meta.env.BASE_URL}headshot.jpg`
 
 export default function About() {
   return (
