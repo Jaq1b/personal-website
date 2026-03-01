@@ -20,7 +20,7 @@ A modern personal portfolio site built with React, TypeScript, Tailwind CSS, and
 
 ## Getting Started
 
-### Installation
+### Installation/Instructions to run locally
 
 ```bash
 npm install
@@ -32,7 +32,7 @@ npm install
 npm run dev
 ```
 
-Runs at `http://localhost:5173`.
+Runs at `http://localhost:5173`. local demo view
 
 ### Build
 
