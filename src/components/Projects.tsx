@@ -1,8 +1,10 @@
+import PageWrapper from './PageWrapper'
+
 interface Project {
   title: string
   description: string
   technologies: string[]
-  status: 'Completed' | 'In Progress' | 'Planning'
+  status: 'Completed' | 'In Progress'
   link?: string
 }
 
@@ -45,70 +47,65 @@ const projects: Project[] = [
 ]
 
 const statusStyles: Record<string, string> = {
-  'Completed': 'bg-green-500/30 border border-green-500/40 text-white/95',
-  'In Progress': 'bg-orange-500/30 border border-orange-500/40 text-white/95',
-  'Planning': 'bg-blue-500/30 border border-blue-500/40 text-white/95',
+  'Completed':  'bg-green-500/30 border-green-500/40',
+  'In Progress': 'bg-orange-500/30 border-orange-500/40',
 }
 
 export default function Projects() {
   return (
-    <div className="w-full min-h-[calc(100vh-200px)]">
-      <div className="max-w-[1200px] mx-auto px-8">
-        <div className="max-w-[1000px] mx-auto">
-          <h1 className="font-display text-[3rem] font-semibold text-white/95 mb-4 tracking-[-0.03em] leading-[1.2]">
-            My Projects
-          </h1>
-          <p className="text-[1.125rem] text-white/80 mb-12 font-normal leading-[1.6]">
-            A collection of projects I've worked on, showcasing my skills and experience
-          </p>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 mb-8">
-            {projects.map((project) => (
-              <div
-                key={project.title}
-                className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300 isolate hover:bg-white/[0.08] hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)]"
-              >
-                <div className="flex justify-between items-start mb-5 pb-4 border-b border-white/10 gap-4">
-                  <h3 className="font-display text-[1.375rem] text-white/95 font-semibold flex-1 tracking-[-0.01em]">
-                    {project.title}
-                  </h3>
-                  <span className={`px-3 py-1.5 rounded-lg text-[0.75rem] font-semibold uppercase tracking-[0.5px] whitespace-nowrap ${statusStyles[project.status]}`}>
-                    {project.status}
-                  </span>
-                </div>
-                <p className="text-white/85 leading-[1.7] mb-6 text-[0.95rem]">
-                  {project.description}
-                </p>
-                <div className="mb-6">
-                  <strong className="text-white/95 block mb-3 text-[0.875rem] font-semibold uppercase tracking-[0.5px]">
-                    Technologies:
-                  </strong>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-white/15 backdrop-blur-sm text-white/95 px-3 py-1.5 rounded-lg text-[0.8125rem] font-medium border border-white/20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-transparent text-white/95 border border-white/20 rounded-lg text-[0.9375rem] font-medium no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/30"
+    <PageWrapper>
+      <h1 className="font-display text-[3rem] font-semibold text-white/95 mb-4 tracking-[-0.03em] leading-[1.2]">
+        My Projects
+      </h1>
+      <p className="text-[1.125rem] text-white/80 mb-12 font-normal leading-[1.6]">
+        A collection of projects I've worked on, showcasing my skills and experience
+      </p>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 mb-8">
+        {projects.map((project) => (
+          <div
+            key={project.title}
+            className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300 isolate hover:bg-white/[0.08] hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)]"
+          >
+            <div className="flex justify-between items-start mb-5 pb-4 border-b border-white/10 gap-4">
+              <h3 className="font-display text-[1.375rem] text-white/95 font-semibold flex-1 tracking-[-0.01em]">
+                {project.title}
+              </h3>
+              <span className={`px-3 py-1.5 rounded-lg text-[0.75rem] font-semibold uppercase tracking-[0.5px] whitespace-nowrap border text-white/95 ${statusStyles[project.status]}`}>
+                {project.status}
+              </span>
+            </div>
+            <p className="text-white/85 leading-[1.7] mb-6 text-[0.95rem]">
+              {project.description}
+            </p>
+            <div className="mb-6">
+              <strong className="text-white/95 block mb-3 text-[0.875rem] font-semibold uppercase tracking-[0.5px]">
+                Technologies:
+              </strong>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-white/15 backdrop-blur-sm text-white/95 px-3 py-1.5 rounded-lg text-[0.8125rem] font-medium border border-white/20"
                   >
-                    View Project
-                    <span className="text-[0.875rem] ml-1 opacity-70">→</span>
-                  </a>
-                )}
+                    {tech}
+                  </span>
+                ))}
               </div>
-            ))}
+            </div>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-transparent text-white/95 border border-white/20 rounded-lg text-[0.9375rem] font-medium no-underline transition-all duration-300 hover:bg-white/10 hover:border-white/30"
+              >
+                View Project
+                <span className="text-[0.875rem] ml-1 opacity-70">→</span>
+              </a>
+            )}
           </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </PageWrapper>
   )
 }
