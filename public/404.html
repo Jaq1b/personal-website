@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Redirect to index.html preserving the path as a query param
+      var repo = '/personal-website';
+      var path = window.location.pathname.replace(repo, '');
+      var search = window.location.search;
+      var hash = window.location.hash;
+      window.location.replace(
+        repo + '/?p=' + encodeURIComponent(path + search) + hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

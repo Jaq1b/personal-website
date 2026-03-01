@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Credentials from './components/Credentials'
@@ -68,6 +68,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/credentials" element={<Credentials />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
 

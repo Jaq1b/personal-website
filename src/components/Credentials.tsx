@@ -9,7 +9,7 @@ const credentials: Credential[] = [
   {
     name: 'GitHub',
     url: 'https://github.com/Jaq1b',
-    description: 'This is my personal github page',
+    description: 'This is my personal GitHub page',
     username: 'Jaq1b',
   },
   {
